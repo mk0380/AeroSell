@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/siteImages/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title> AeroSell | HomePage</title>
+</head>
+
+<body>
+
+
+    <div id="preloader"></div>
+
+    <!-- =============================== * navbar * ============================================ -->
+
+    <div class="hedder">
+        <div class="navbar">
+
+            <div style="font-size: 35px;font-weight: 800;">
+                AeroSell
+            </div>
+
+            <div class="search_box">
+                <input type="text" class="searchclass" id="searchid" placeholder="Find Cars, mobile phone and More....">
+                <p> <i class="fa-solid fa-magnifying-glass"></i> </p>
+            </div>
+
+            <div class="selling_page">
+                <button> <i class="fa-solid fa-plus"></i>
+                    <p>SELL</p>
+                </button>
+            </div>
+
+            <% if( user.length!==0){ %>
+            <img src="/user/<%= user.image %>" alt="" class="user-pic" style="width: 60px; height: auto;" onclick="toggleMenu()">
+            <div class="sub-menu-wrap" style="color: white;" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="/user/<%= user.image %>" style="width: 50px;">
+                        <h3 ><%= user.name %></h3>
+                    </div>
+                    <hr>
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="siteImages/profile.png" alt="" style="background-color: white;">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="siteImages/passwordchange.png" alt="" style="background-color: white;">
+                        <p>Change Password</p>
+                        <span>></span>
+                    </a>
+                    <a href="/adds/edit" class="sub-menu-link">
+                        <img src="siteImages/edit.png" alt="" style="background-color: white;">
+                        <p>Edit Adds</p>
+                        <span>></span>
+                    </a>
+                    <a href="/user/logout" class="sub-menu-link">
+                        <img src="siteImages/logout.png" alt="" style="background-color: white;">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+
+                </div>
+            </div>
+            <% } else{ %>
+
+                <div class="selling_page" style="margin-left: 40px;">
+                    <button onclick="toggleMenu()">
+                        <p>LOGIN / REGISTER</p>
+                    </button>
+                    <div class="sub-menu-wrap" style="color: white;" id="subMenu">
+                        <div class="sub-menu">
+        
+                            <a href="/user/login" class="sub-menu-link">
+                                <img src="siteImages/login.png" alt="" style="background-color: white;">
+                                <p>Login</p>
+                                <span>></span>
+                            </a>
+                            <a href="/user/register" class="sub-menu-link">
+                                <img src="siteImages/register.png" alt="" style="background-color: white;">
+                                <p>Register</p>
+                                <span>></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <% } %>
+
+
+        </div>
+    </div>
+
+
+    <!-- =============================== * product * ============================================ -->
+
+
+    <div class="product">
+        <div class="First_row">
+            <div class="box">
+                <a href="produc_olx.html">
+                    <img src="productImages/product-1.jpg">
+                    <h2>₹3,500</h2>
+                    <p>Mi TV Stick</p>
+                    <div class="addres_data">
+                        <p>Bandra East, Mumbai</p>
+                        <p>Today</p>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <img src="productImages/product-2.jpg">
+                <h2> ₹4800 </h2>
+                <p> xbox one s</p>
+                <div class="addres_data">
+                    <p>CHEMBUR, MUMBAI</p>
+                    <p> JUL 27</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-3.jpg">
+                <h2> ₹7000</h2>
+                <p> Refrigerator</p>
+                <div class="addres_data">
+                    <p>DHARAVI, MUMBAI</p>
+                    <p> Today </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-4.jpg">
+                <h2> ₹8,00,000 </h2>
+                <p> Mitsubishi Pajero (2012) </p>
+                <div class="addres_data">
+                    <p>VERSOVA, MUMBAI</p>
+                    <p> Today </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="First_row">
+            <div class="box">
+                <img src="productImages/product-5.jpg">
+                <h2> ₹800 </h2>
+                <p> Black Jeans for man</p>
+                <div class="addres_data">
+                    <p>BORIVALI WEST, MUMBAI</p>
+                    <p> DEC 24 </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-6.jpg">
+                <h2> ₹3,000 </h2>
+                <p> Pricise corrom board</p>
+                <div class="addres_data">
+                    <p>IC COLONY, MUMBAI</p>
+                    <p> JAN 29 </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-7.jpg">
+                <h2> ₹3,800 </h2>
+                <p> CrossBeat Torq Buds</p>
+                <div class="addres_data">
+                    <p>DHARAVI, MUMBAI</p>
+                    <p> Today </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-8.jpg">
+                <h2> ₹39,000 </h2>
+                <p> Nikon D7000 DSLR camera </p>
+                <div class="addres_data">
+                    <p>ANDHERI WEST, MUMBAI</p>
+                    <p> FEB 02 </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="First_row">
+            <div class="box">
+                <img src="productImages/product-9.jpg">
+                <h2> ₹400 </h2>
+                <p> Black jacket</p>
+                <div class="addres_data">
+                    <p>KANDIVALI WEST, MUMBAI</p>
+                    <p> FEB 11 </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-10.jpg">
+                <h2> ₹3,400 </h2>
+                <p> LG Washing machine </p>
+                <div class="addres_data">
+                    <p>SANTACRUZ EAST, MUMBAI</p>
+                    <p> Today </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-11.jpg">
+                <h2> ₹700 </h2>
+                <p> Running Shoe (athletes) </p>
+                <div class="addres_data">
+                    <p>BANDRA EAST, MUMBAI</p>
+                    <p> FEB 25 </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-12.jpg">
+                <h2> ₹35,000 </h2>
+                <p> Antique premium teak wood Sofa set </p>
+                <div class="addres_data">
+                    <p>Bandra East, Mumbai</p>
+                    <p> Today </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="First_row">
+            <div class="box">
+                <img src="productImages/product-13.jpg">
+                <h2> ₹3,35,000 </h2>
+                <p> Hyundai I20 (2010)</p>
+                <div class="addres_data">
+                    <p>KHAR EAST, MUMBAI</p>
+                    <p> JAN 14 </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-14.jpg">
+                <h2> ₹6,000 </h2>
+                <p> dining table</p>
+                <div class="addres_data">
+                    <p>DADAR WEST, MUMBAI</p>
+                    <p> JUN 10</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-15.jpg">
+                <h2> ₹1,200 </h2>
+                <p> Mens fastrack watch </p>
+                <div class="addres_data">
+                    <p>KURLA EAST, MUMBAI</p>
+                    <p> JAN 7 </p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="productImages/product-16.jpg">
+                <h2> ₹2,100 </h2>
+                <p> Pure Metal Dumbbells</p>
+                <div class="addres_data">
+                    <p>Bandra East, Mumbai</p>
+                    <p> Today </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- =============================== * LOde more * ============================================ -->
+
+
+
+    <div class="LOde_more">
+        <button id="Lode_more_id"> Load More </button>
+
+
+
+        <div class="lode-More_products" id="lode_more_products_id">
+            <div class="First_row">
+                <div class="box">
+                    <a href="#"></a>
+                    <img src="productImages/product-1.jpg">
+                    <h2>₹3,500</h2>
+                    <p>Mi TV Stick</p>
+                    <div class="addres_data">
+                        <p>Bandra East, Mumbai</p>
+                        <p>Today</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="productImages/product-2.jpg">
+                    <h2> ₹4800 </h2>
+                    <p> xbox one s</p>
+                    <div class="addres_data">
+                        <p>CHEMBUR, MUMBAI</p>
+                        <p> JUL 27</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="productImages/product-3.jpg">
+                    <h2> ₹7000</h2>
+                    <p> Refrigerator</p>
+                    <div class="addres_data">
+                        <p>DHARAVI, MUMBAI</p>
+                        <p> Today </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="productImages/product-4.jpg">
+                    <h2> ₹8,00,000 </h2>
+                    <p> Mitsubishi Pajero (2012) </p>
+                    <div class="addres_data">
+                        <p>VERSOVA, MUMBAI</p>
+                        <p> Today </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="First_row">
+                <div class="box">
+                    <img src="productImages/product-5.jpg">
+                    <h2> ₹800 </h2>
+                    <p> Black Jeans for man</p>
+                    <div class="addres_data">
+                        <p>BORIVALI WEST, MUMBAI</p>
+                        <p> DEC 24 </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="productImages/product-6.jpg">
+                    <h2> ₹3,000 </h2>
+                    <p> Pricise corrom board</p>
+                    <div class="addres_data">
+                        <p>IC COLONY, MUMBAI</p>
+                        <p> JAN 29 </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="productImages/product-7.jpg">
+                    <h2> ₹3,800 </h2>
+                    <p> CrossBeat Torq Buds</p>
+                    <div class="addres_data">
+                        <p>DHARAVI, MUMBAI</p>
+                        <p> Today </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="productImages/product-8.jpg">
+                    <h2> ₹39,000 </h2>
+                    <p> Nikon D7000 DSLR camera </p>
+                    <div class="addres_data">
+                        <p>ANDHERI WEST, MUMBAI</p>
+                        <p> FEB 02 </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <!-- =============================== * downlode * ============================================ -->
+
+
+    <div class="downlode_app">
+        <div class="downlode">
+            <img src="productImages/footar.jpg" class="imges">
+
+            <div class="text">
+                <h1> TRY THE OLX APP</h1>
+                <p>Buy, sell and find just about anything using <br>
+                    the app on your mobile.</p>
+            </div>
+            <div class="downlode_store">
+                <p> GET YOUR APP TODAY </p>
+                <img src="productImages/play store.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- =============================== * footer * ============================================ -->
+
+
+
+    <div class="Main_footer">
+        <div class="footer">
+            <div class="footer_box">
+                <h2>POPULAR LOCATIONS</h2>
+                <p> Kolkata</p>
+                <p>Mumbai</p>
+                <p>Chennai</p>
+                <p>pune</p>
+            </div>
+            <div class="footer_box">
+                <h2>TRENDING LOCATIONS</h2>
+                <p> Bhubaneshwar</p>
+                <p>Hyderabad</p>
+                <p>Chandigarh</p>
+                <p>Nashik</p>
+            </div>
+            <div class="footer_box">
+                <h2>ABOUT US</h2>
+                <p> About OLX Group</p>
+                <p>Careers</p>
+                <p>Contact Us</p>
+                <p>OLXPeople</p>
+            </div>
+            <div class="footer_box">
+                <h2>OLX</h2>
+                <p> Help</p>
+                <p>Legal & Privacy information</p>
+                <p>Blog</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        //  =============================== * navbar * ============================================
+
+
+        let subMenu= document.getElementById('subMenu')
+
+        function toggleMenu(){
+         subMenu.classList.toggle("open-menu");
+        }
+
+
+
+        //  =============================== * lode more * ============================================
+
+
+        let Lode_more_id = document.getElementById('Lode_more_id');
+        let lode_more_products_id = document.getElementById('lode_more_products_id');
+
+
+        Lode_more_id.addEventListener('click', () => {
+            lode_more_products_id.style = 'display:block';
+            Lode_more_id.style = 'display:none'
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #preloader{
+        background: #000 url(siteImages/preloader.gif) no-repeat center center;
+        height: 100vh;
+        background-size: 20%;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+    }
+
+    /* <!-- =============================== * navbar * ============================================ --> */
+    .hedder {
+        background-color: #f7f8f9;
+        box-shadow: 0 0 2px grey;
+        position: sticky;
+        top: 0%;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        width: 1300px;
+        margin: auto;
+    }
+
+    .search_box {
+
+        display: flex;
+        margin-left: 190px;
+        margin-right: 90px;
+    }
+
+    .search_box i {
+        background-color: black;
+        color: white;
+        padding: 14px;
+        font-size: 15px;
+        border-radius: 0 6px 6px 0;
+        cursor: pointer;
+    }
+
+    .searchclass {
+        padding: 10px;
+        width: 600px;
+        font-size: 15px;
+        border: 2px solid black;
+        border-radius: 6px 0 0 6px;
+    }
+
+    .user-pic{
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 90px;
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu{
+    background:rgb(14, 13, 14);
+    padding: 20px;
+    margin: 10px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info h3{
+    font-weight: 700;
+}
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0px 10px;
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+.sub-menu-link p{
+    width: 100%;
+    color: white;
+}
+.sub-menu-link img{
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+.sub-menu-link span{
+    font-size: 22px;
+    color: white;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+}
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+    .selling_page button {
+        margin-left: 25px;
+        border-style: solid;
+        border-width: 5px;
+        border-top-color: #23e5db;
+        border-left-color: #ffce32;
+        border-right-color: #3a77ff;
+        border-bottom-color: #3a77ff;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 6px 12px;
+        border-radius: 30px;
+        background-color: white;
+        color: black;
+        display: flex;
+    }
+
+    /* <!-- =============================== * product* ============================================ --> */
+    .First_row {
+        display: flex;
+        justify-content: space-evenly;
+        width: 1200px;
+        margin: auto;
+        margin-top: 35px;
+    }
+
+    .box img {
+        width: 250px;
+    }
+
+    .box {
+        border: 1px solid rgb(197, 196, 196);
+        width: 260px;
+        height: 230px;
+        cursor: pointer;
+    }
+
+    .box:hover {
+        border: 1px solid rgb(138, 137, 139);
+    }
+
+    .box a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .box h2 {
+        padding: 5px 0 0 20px;
+    }
+
+    .box p {
+        padding: 0 0 10px 20px;
+        color: #6f8a94;
+        font-size: 14px;
+    }
+
+    .addres_data {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .addres_data p {
+        font-size: 11px;
+        margin-right: 10px;
+    }
+
+    /* <!-- =============================== * lode more * ============================================ --> */
+    .LOde_more button {
+        margin: 50px auto;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background-color: white;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        transition: all 0.5s;
+        border: 2px solid black;
+    }
+
+    .LOde_more button:hover {
+        border: 4px solid black;
+    }
+
+    #lode_more_products_id {
+        display: none;
+    }
+
+    /* <!-- =============================== * downlode * ============================================ --> */
+    .downlode_app {
+        background-color: #f7f8f9;
+    }
+
+    .downlode {
+        margin: 100px 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imges {
+        width: 400px;
+    }
+
+    .text {
+        border-right: 2px solid #cacdce;
+    }
+
+    .text h1 {
+        padding: 20px 20px 10px 20px;
+        font-size: 35px;
+    }
+
+    .text p {
+        padding: 10px 20px 20px 20px;
+        font-size: 20px;
+    }
+
+    .downlode_store p {
+        padding: 20px 20px 20px 0;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .downlode_store {
+        padding-left: 30px;
+    }
+
+    .downlode_store img {
+        width: 140px;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+    /* <!-- =============================== * footer * ============================================ --> */
+    .Main_footerP {
+        background-color: #ebeeef;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1200px;
+        margin: auto;
+    }
+
+    .footer_box h2 {
+        font-size: 17px;
+        margin: 10px 0 15px 0;
+        cursor: pointer;
+    }
+
+    .footer_box p {
+        margin: 8px 0 8px 0;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    var loader=document.getElementById("preloader")
+    window.addEventListener("load",function(){
+        loader.style.display= "none";
+    })
+</script>
